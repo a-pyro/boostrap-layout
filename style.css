@@ -1,0 +1,46 @@
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.dropdown-menu {
+  left: -10%;
+  background-color: #555;
+}
+
+.dropdown-menu > a {
+  color: #fff;
+}
+.dropdown-menu > a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+#userImg {
+  height: 100%;
+}
+
+.btn.btn-dark.dropdown-toggle.text-light.rounded-pill {
+  padding: 0;
+  padding-right: 0.5rem;
+}
+
+#side-menu {
+  background-color: #000;
+  height: 90vh;
+  position: sticky;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+}
+
+#footer {
+  background-color: #282828;
+  height: 10vh;
+  position: sticky;
+  bottom: 0;
+}
+
+.bg-dark {
+  /* transition: all 1s; */
+}
