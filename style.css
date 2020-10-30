@@ -25,13 +25,14 @@ body {
   padding-right: 0.5rem;
 }
 
-#side-menu {
+#sideMenu {
   background-color: #000;
   height: 90vh;
   position: sticky;
   left: 0;
   top: 0;
-  overflow: scroll;
+  /* overflow: scroll; */
+  flex: 0 0 232px; /* fixing position*/
 }
 
 #footer {
@@ -41,6 +42,26 @@ body {
   bottom: 0;
 }
 
-.bg-dark {
-  /* transition: all 1s; */
+.bg-transparent {
+  transition: all 0.5s;
+}
+
+/* Modify the backgorund color */
+.navbar-custom {
+  transition: all 0.5s;
+  background-color: #282828;
+}
+
+img:hover {
+  transition: 0.5s all;
+  transform: scale(1.2);
+}
+
+/* button menu xs */
+
+/* moving dropdown menu on mobile */
+@media (max-width: 768px) {
+  #dropDown {
+    left: -350%;
+  }
 }

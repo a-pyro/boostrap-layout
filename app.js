@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('dom loaded');
-  const container = document.querySelector('.container');
+  // smooth scroll
+  const scroll = new SmoothScroll('a[href*="#"]');
+  const container = document.querySelector('.container-fluid');
 
   // random img array function
   const createRandomImgArray = (numberOfImages, width, height) => {
@@ -9,10 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const imgLink = `https://picsum.photos/${String(width)}/${String(
         height
       )}?random=${Math.ceil(Math.random() * 100)}`;
+      const newAnchor = document.createElement('a');
+      newAnchor.setAttribute('target', '_blank');
+      newAnchor.setAttribute('title', 'click to open');
+      newAnchor.setAttribute('href', imgLink);
       const newImg = document.createElement('img');
       newImg.setAttribute('src', imgLink);
       newImg.classList.add('img-fluid');
-      arrayOfImg.push(newImg);
+      newAnchor.appendChild(newImg);
+      arrayOfImg.push(newAnchor);
     }
     return arrayOfImg;
   };
@@ -20,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //   create the basic bootstrap grid
   //   2 row 6 col
   const firstRow = document.createElement('div');
-  firstRow.classList.add('row', 'first-row', 'justify-content-center');
+  firstRow.classList.add('row', 'first-row', 'justify-content-start');
   const secondRow = document.createElement('div');
-  secondRow.classList.add('row', 'second-row', 'justify-content-center');
+  secondRow.classList.add('row', 'second-row', 'justify-content-start');
   container.append(firstRow, secondRow);
 
   //   create col and append to rows
@@ -59,17 +66,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //   changin bg color to the navbar on scroll
   const navBar = document.querySelector('#navBar');
-  const mainPage = document.querySelector('#mainPage');
+
   window.addEventListener('scroll', (e) => {
     const yPos = window.scrollY;
-
-    if (yPos >= 20) {
+    if (yPos >= 25) {
       navBar.classList.remove('bg-transparent');
-      navBar.classList.add('bg-dark');
+      navBar.classList.add('navbar-custom');
     }
     if (yPos === 0) {
       navBar.classList.add('bg-transparent');
-      navBar.classList.remove('bg-dark');
+      navBar.classList.remove('navbar-custom');
     }
   });
+
+  //   const yPos = window.scrollY;
+  //   if (yPos >= 25) {
+  //     navBar.classList.remove('bg-transparent');
+  //     navBar.classList.add('navbar-custom');
+
+  //     navBar.style.transform = 'translateY(-70px)';
+
+  //     setTimeout(function () {
+  //       navBar.style.transform = 'translateY(0)';
+  //     }, 200);
+  //   }
+  //   if (yPos === 0) {
+  //     navBar.classList.add('bg-transparent');
+  //     navBar.classList.remove('navbar-custom');
+  //   }
+  // });
 });
+
+// let scrolled = false;
+
+// window.onscroll = function () {
+//   if (window.pageYOffset > 30) {
+//     navBar.classList.remove('bg-transparent');
+//     if (!scrolled) {
+//       navBar.style.transform = 'translateY(-70px)';
+//     }
+//     setTimeout(function () {
+//       navBar.style.transform = 'translateY(0)';
+//       scrolled = true;
+//     }, 200);
+//   } else {
+//     navBar.classList.add('bg-dark');
+//     scrolled = false;
+//   }
+// };
