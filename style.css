@@ -34,6 +34,9 @@ body {
   /* overflow: scroll; */
   flex: 0 0 232px; /* fixing position*/
 }
+#sideMenu * {
+  color: #fff;
+}
 
 #footer {
   background-color: #282828;
@@ -54,7 +57,16 @@ body {
 
 img:hover {
   transition: 0.5s all;
-  transform: scale(1.2);
+  transform: translateY(-10px);
+}
+
+.spotify-logo--text {
+  width: 131px;
+  height: 40px;
+}
+
+#homeSide {
+  line-height: 3;
 }
 
 /* button menu xs */
