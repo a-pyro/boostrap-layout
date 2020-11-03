@@ -32,8 +32,9 @@
   </head>
   <body>
     <div class="row flex-wrap no-gutters" id="myPage">
-      <div class="col" id="sideMenu">
-        <div class="row flex-column no-gutters">
+      <!-- SIDE MENU -->
+      <aside class="col side-menu" id="sideMenu">
+        <section class="row flex-column no-gutters">
           <!-- col logo-->
           <div class="col pl-4 pt-3 mb-5">
             <a
@@ -52,34 +53,95 @@
           </div>
 
           <!-- home, find, library -->
-          <div class="col pl-4 d-flex align-items-center">
-            <a href="#" id="homeSide"
-              ><svg
-                class="mr-1"
-                viewBox="0 0 512 512"
-                width="24"
-                height="24"
-                xmlns="http://www.w3.org/2000/svg"
+          <section
+            class="col d-flex flex-column align-items-start side-menu-item"
+          >
+            <!-- home btn -->
+            <div class="home-btn mb-3 active pl-3">
+              <a class="d-flex align-items-center" href="#" id="homeSide"
+                ><svg
+                  class="mr-3"
+                  viewBox="0 0 512 512"
+                  width="26"
+                  height="26"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span class="d-inline-block">Home</span></a
               >
-                <path
-                  d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-              Home</a
-            >
-          </div>
+            </div>
+            <!-- search btn -->
+            <div class="search-btn mb-3 pl-3">
+              <a class="d-flex align-items-center" href="#" id="searchSide"
+                ><svg
+                  class="mr-3"
+                  viewBox="0 0 512 512"
+                  width="26"
+                  height="26"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Search</span></a
+              >
+            </div>
+
+            <!-- your library btn -->
+            <div class="library-btn mb-3 pl-3">
+              <a class="d-flex align-items-center" href="#" id="searchSide"
+                ><svg
+                  class="mr-3"
+                  viewBox="0 0 512 512"
+                  width="26"
+                  height="26"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span>Your library</span></a
+              >
+            </div>
+
+            <!-- playlist -->
+            <div class="playlist mt-3 pl-3">
+              <h5 class="mb-3">PLAYLIST</h5>
+              <a href="#">
+                <div
+                  id="createPlaylist"
+                  class="d-inline-flex justify-content-center align-items-center mr-2"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+
+                <span>Create playlist</span>
+              </a>
+            </div>
+          </section>
+
           <div class="col"></div>
-        </div>
-      </div>
+        </section>
+      </aside>
+
+      <!-- MAIN PAGE -->
       <div class="col" id="mainPage">
         <!-- NAVIGATION BAR -->
         <nav class="navbar bg-transparent navbar-light sticky-top" id="navBar">
           <a class="navbar-brand" href="#"
-            ><i class="fas fa-chevron-circle-left fa-2x text-white-50"></i
+            ><i class="fas fa-chevron-circle-left chevron text-white-50"></i
           ></a>
           <a class="navbar-brand mr-auto" href="#"
-            ><i class="fas fa-chevron-circle-right fa-2x text-white-50"></i
+            ><i class="fas fa-chevron-circle-right chevron text-white-50"></i
           ></a>
           <div class="dropdown">
             <button
@@ -125,11 +187,8 @@
         </nav>
         <div class="container-fluid"></div>
       </div>
+      <!-- FOOTER -->
       <div class="col-12" id="footer"></div>
-    </div>
-
-    <div class="row invisible" id="provaRow">
-      <div class="col" id="provaCol"></div>
     </div>
 
     <script

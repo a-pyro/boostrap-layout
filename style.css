@@ -25,19 +25,6 @@ body {
   padding-right: 0.5rem;
 }
 
-#sideMenu {
-  background-color: #000;
-  height: 90vh;
-  position: sticky;
-  left: 0;
-  top: 0;
-  /* overflow: scroll; */
-  flex: 0 0 232px; /* fixing position*/
-}
-#sideMenu * {
-  color: #fff;
-}
-
 #footer {
   background-color: #282828;
   height: 10vh;
@@ -66,30 +53,61 @@ img:hover {
 }
 
 #homeSide {
-  line-height: 3;
+  line-height: 2;
 }
 
-/* PROVE */
-#provaRow {
-  width: 300px;
-  border: 1px solid #fff;
-  height: 20vh;
-  position: fixed;
-
-  top: 30%;
-  left: 50%;
+.chevron {
+  font-size: 2rem;
 }
 
-.invisible {
-  visibility: hidden;
+/* SIDE MENU */
+/* SIDE MENU */
+/* SIDE MENU */
+#sideMenu {
+  background-color: #000;
+  height: 90vh;
+  position: sticky;
+  left: 0;
+  top: 0;
+  /* overflow: scroll; */
+  flex: 0 0 232px; /* fixing position*/
+}
+.side-menu a {
+  color: rgba(255, 255, 255, 1);
+}
+/* activew state for side menu */
+
+/* when non active, half alpha */
+.side-menu-item a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  text-decoration: none;
+}
+/* when non active ad hover, alpha 1 */
+.side-menu-item a:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
-.opaco {
-  opacity: 20%;
+/* when active, full alpha */
+.active,
+.active a {
+  width: 95%;
+  background-color: #282828;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 1);
 }
-/* ----------------------------- */
 
-/* button menu xs */
+/* playlist side section */
+
+.playlist h5 {
+  font-size: 0.8rem;
+}
+
+#createPlaylist {
+  height: 35px;
+  width: 35px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 /* moving dropdown menu on mobile */
 @media (max-width: 768px) {
