@@ -79,6 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const home = document.querySelector('.navbar-brand.mr-auto');
+  console.log(home);
+  home.addEventListener('click', () => {
+    console.log('i work');
+    const elementToshow = document.querySelector('#provaRow');
+    elementToshow.classList.toggle('invisible');
+    const myPage = document.querySelector('#myPage');
+    myPage.classList.toggle('opaco');
+  });
+
   //   const yPos = window.scrollY;
   //   if (yPos >= 25) {
   //     navBar.classList.remove('bg-transparent');

@@ -69,6 +69,26 @@ img:hover {
   line-height: 3;
 }
 
+/* PROVE */
+#provaRow {
+  width: 300px;
+  border: 1px solid #fff;
+  height: 20vh;
+  position: fixed;
+
+  top: 30%;
+  left: 50%;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.opaco {
+  opacity: 20%;
+}
+/* ----------------------------- */
+
 /* button menu xs */
 
 /* moving dropdown menu on mobile */
