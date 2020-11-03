@@ -57,8 +57,8 @@
             class="col d-flex flex-column align-items-start side-menu-item"
           >
             <!-- home btn -->
-            <div class="home-btn mb-3 active pl-3">
-              <a class="d-flex align-items-center" href="#" id="homeSide"
+            <div class="home-btn mb-2 active pl-3">
+              <a class="d-flex align-items-center" href="#" id="homeBtn"
                 ><svg
                   class="mr-3"
                   viewBox="0 0 512 512"
@@ -75,8 +75,8 @@
               >
             </div>
             <!-- search btn -->
-            <div class="search-btn mb-3 pl-3">
-              <a class="d-flex align-items-center" href="#" id="searchSide"
+            <div class="search-btn mb-2 pl-3">
+              <a class="d-flex align-items-center" href="#" id="searchBtn"
                 ><svg
                   class="mr-3"
                   viewBox="0 0 512 512"
@@ -95,8 +95,8 @@
             </div>
 
             <!-- your library btn -->
-            <div class="library-btn mb-3 pl-3">
-              <a class="d-flex align-items-center" href="#" id="searchSide"
+            <div class="library-btn mb-2 pl-3">
+              <a class="d-flex align-items-center" href="#" id="libraryBtn"
                 ><svg
                   class="mr-3"
                   viewBox="0 0 512 512"
@@ -116,7 +116,7 @@
             <!-- playlist -->
             <div class="playlist mt-3 pl-3">
               <h5 class="mb-3">PLAYLIST</h5>
-              <a href="#">
+              <a href="#" id="createPlaylistBtn">
                 <div
                   id="createPlaylist"
                   class="d-inline-flex justify-content-center align-items-center mr-2"
@@ -125,6 +125,17 @@
                 </div>
 
                 <span>Create playlist</span>
+              </a>
+              <!-- favourites -->
+              <a href="#" id="favouritesBtn" class="d-block mt-2">
+                <div
+                  id="favourites"
+                  class="d-inline-flex justify-content-center align-items-center mr-2"
+                >
+                  <i class="fas fa-heart"></i>
+                </div>
+
+                <span>Favourites</span>
               </a>
             </div>
           </section>

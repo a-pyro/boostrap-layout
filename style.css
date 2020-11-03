@@ -52,7 +52,9 @@ img:hover {
   height: 40px;
 }
 
-#homeSide {
+#homeBtn,
+#searchBtn,
+#libraryBtn {
   line-height: 2;
 }
 
@@ -103,10 +105,15 @@ img:hover {
   font-size: 0.8rem;
 }
 
-#createPlaylist {
+#createPlaylist,
+#favourites {
   height: 35px;
   width: 35px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+#favourites {
+  background-image: linear-gradient(135deg, #450af5, #c4efd9);
 }
 
 /* moving dropdown menu on mobile */
