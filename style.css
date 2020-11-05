@@ -1,124 +1,185 @@
 body {
-  background-color: #111;
-  color: #fff;
+    background-color: #111;
+    color: #fff;
 }
 
 .dropdown-menu {
-  left: -15%;
-  background-color: #555;
+    left: -15%;
+    background-color: #555;
+}
+a {
+    color: #fff;
+}
+a:hover {
+    color: #fff;
 }
 
 .dropdown-menu > a {
-  color: #fff;
+    color: #fff;
 }
 .dropdown-menu > a:hover {
-  background-color: #555;
-  color: #fff;
+    background-color: #555;
+    color: #fff;
 }
 
 #userImg {
-  height: 100%;
+    height: 100%;
 }
 
 .btn.btn-dark.dropdown-toggle.text-light.rounded-pill {
-  padding: 0;
-  padding-right: 0.5rem;
+    padding: 0;
+    padding-right: 0.5rem;
 }
 
 #footer {
-  background-color: #282828;
-  height: 10vh;
-  position: sticky;
-  bottom: 0;
+    background-color: #282828;
+    height: 10vh;
+    position: sticky;
+    bottom: 0;
 }
 
 .bg-transparent {
-  transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 /* Modify the backgorund color */
 .navbar-custom {
-  transition: all 0.5s;
-  background-color: #282828;
+    transition: all 0.5s;
+    background-color: #282828;
 }
 
-img:hover {
-  transition: 0.5s all;
-  transform: translateY(-10px);
-}
+/* img:hover {
+    transition: 0.5s all;
+    transform: translateY(-10px);
+} */
 
 .spotify-logo--text {
-  width: 131px;
-  height: 40px;
+    width: 131px;
+    height: 40px;
 }
 
 #homeBtn,
 #searchBtn,
 #libraryBtn {
-  line-height: 2;
+    line-height: 2;
 }
 
 .chevron {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 /* SIDE MENU */
 /* SIDE MENU */
 /* SIDE MENU */
 #sideMenu {
-  background-color: #000;
-  height: 90vh;
-  position: sticky;
-  left: 0;
-  top: 0;
-  /* overflow: scroll; */
-  flex: 0 0 232px; /* fixing position*/
+    background-color: #000;
+    height: 90vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+    /* overflow: scroll; */
+    flex: 0 0 232px; /* fixing position*/
 }
 .side-menu a {
-  color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 /* activew state for side menu */
 
 /* when non active, half alpha */
 .side-menu-item a {
-  color: rgba(255, 255, 255, 0.5);
-  transition: 0.3s;
-  text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+    text-decoration: none;
 }
 /* when non active ad hover, alpha 1 */
 .side-menu-item a:hover {
-  color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 /* when active, full alpha */
 .active,
 .active a {
-  width: 95%;
-  background-color: #282828;
-  border-radius: 5px;
-  color: rgba(255, 255, 255, 1);
+    width: 95%;
+    background-color: #282828;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
 }
 
 /* playlist side section */
 
 .playlist h5 {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 #createPlaylist,
 #favourites {
-  height: 35px;
-  width: 35px;
-  background-color: rgba(255, 255, 255, 0.5);
+    height: 35px;
+    width: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #favourites {
-  background-image: linear-gradient(135deg, #450af5, #c4efd9);
+    background-image: linear-gradient(135deg, #450af5, #c4efd9);
+}
+
+#sideHr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 180px;
+
+    justify-self: self-start;
+}
+
+/* user playlist side section */
+
+#userPlaylists {
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.cut-text {
+    text-overflow: ellipsis;
+    /* overflow-x: hidden; */
+    width: 160px;
+    height: 1.2em;
+    white-space: nowrap;
+}
+
+/* MAIN PAGE */
+
+.card-img-top {
+    height: 65%;
+    width: 100%;
+    object-fit: cover;
+    /* padding-top: 0.4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem; */
+    -webkit-box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.75);
+    margin-bottom: 0.7rem;
+}
+
+.card {
+    /* height: 300px; */
+    /* width: 200px; */
+    background-color: rgba(40, 40, 40, 0.3);
+
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.card:hover {
+    background-color: rgba(40, 40, 40, 1);
+}
+
+.card-body {
+    height: 100%;
 }
 
 /* moving dropdown menu on mobile */
 @media (max-width: 768px) {
-  #dropDown {
-    left: -400%;
-  }
+    #dropDown {
+        left: -400%;
+    }
 }

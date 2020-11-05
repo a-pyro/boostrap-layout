@@ -1,219 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-    <!-- animate css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
+        <!-- animate css -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+            integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
 
-    <title>Boostrap Layout Mixed Dom</title>
-  </head>
-  <body>
-    <div class="row flex-wrap no-gutters" id="myPage">
-      <!-- SIDE MENU -->
-      <aside class="col side-menu" id="sideMenu">
-        <section class="row flex-column no-gutters">
-          <!-- col logo-->
-          <div class="col pl-4 pt-3 mb-5">
-            <a
-              href="https://open.spotify.com/"
-              target="_blank"
-              title="go to spotify"
-            >
-              <svg viewBox="0 0 1134 340" class="spotify-logo--text">
-                <title>Spotify</title>
-                <path
-                  fill="currentColor"
-                  d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
-                ></path>
-              </svg>
-            </a>
-          </div>
+        <title>Boostrap Layout Mixed Dom</title>
+    </head>
+    <body>
+        <div class="row flex-wrap no-gutters" id="myPage">
+            <!-- SIDE MENU -->
+            <aside class="col side-menu overflow-hidden" id="sideMenu">
+                <section class="row flex-column no-gutters">
+                    <!-- col logo-->
+                    <div class="col pl-4 pt-3 mb-5">
+                        <a
+                            href="https://open.spotify.com/"
+                            target="_blank"
+                            title="go to spotify"
+                        >
+                            <svg
+                                viewBox="0 0 1134 340"
+                                class="spotify-logo--text"
+                            >
+                                <title>Spotify</title>
+                                <path
+                                    fill="currentColor"
+                                    d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
+                                ></path>
+                            </svg>
+                        </a>
+                    </div>
 
-          <!-- home, find, library -->
-          <section
-            class="col d-flex flex-column align-items-start side-menu-item"
-          >
-            <!-- home btn -->
-            <div class="home-btn mb-2 active pl-3">
-              <a class="d-flex align-items-center" href="#" id="homeBtn"
-                ><svg
-                  class="mr-3"
-                  viewBox="0 0 512 512"
-                  width="26"
-                  height="26"
-                  xmlns="http://www.w3.org/2000/svg"
+                    <!-- home, find, library -->
+                    <section
+                        class="col d-flex flex-column align-items-start side-menu-item"
+                    >
+                        <!-- home btn -->
+                        <div class="home-btn mb-2 active pl-3">
+                            <a
+                                class="d-flex align-items-center"
+                                href="#"
+                                id="homeBtn"
+                                ><svg
+                                    class="mr-3"
+                                    viewBox="0 0 512 512"
+                                    width="26"
+                                    height="26"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                                        fill="currentColor"
+                                    ></path>
+                                </svg>
+                                <span class="d-inline-block">Home</span></a
+                            >
+                        </div>
+                        <!-- search btn -->
+                        <div class="search-btn mb-2 pl-3">
+                            <a
+                                class="d-flex align-items-center"
+                                href="#"
+                                id="searchBtn"
+                                ><svg
+                                    class="mr-3"
+                                    viewBox="0 0 512 512"
+                                    width="26"
+                                    height="26"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                    ></path>
+                                </svg>
+                                <span>Search</span></a
+                            >
+                        </div>
+
+                        <!-- your library btn -->
+                        <div class="library-btn mb-2 pl-3">
+                            <a
+                                class="d-flex align-items-center"
+                                href="#"
+                                id="libraryBtn"
+                                ><svg
+                                    class="mr-3"
+                                    viewBox="0 0 512 512"
+                                    width="26"
+                                    height="26"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                                        fill="currentColor"
+                                    ></path>
+                                </svg>
+                                <span>Your library</span></a
+                            >
+                        </div>
+                    </section>
+                </section>
+                <!-- playlist section -->
+
+                <section
+                    class="row flex-column no-gutters playlist mt-3 pl-3 side-menu-item user-playlists"
                 >
-                  <path
-                    d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                <span class="d-inline-block">Home</span></a
-              >
-            </div>
-            <!-- search btn -->
-            <div class="search-btn mb-2 pl-3">
-              <a class="d-flex align-items-center" href="#" id="searchBtn"
-                ><svg
-                  class="mr-3"
-                  viewBox="0 0 512 512"
-                  width="26"
-                  height="26"
-                  xmlns="http://www.w3.org/2000/svg"
+                    <div
+                        class="col d-flex flex-column justify-content-start align-items-start"
+                    >
+                        <h5 class="mb-3">PLAYLIST</h5>
+                        <a href="#" id="createPlaylistBtn">
+                            <div
+                                id="createPlaylist"
+                                class="d-inline-flex justify-content-center align-items-center mr-2"
+                            >
+                                <i class="fas fa-plus"></i>
+                            </div>
+
+                            <span>Create playlist</span>
+                        </a>
+                        <!-- favourites -->
+                        <a href="#" id="favouritesBtn" class="d-block mt-2">
+                            <div
+                                id="favourites"
+                                class="d-inline-flex justify-content-center align-items-center mr-2"
+                            >
+                                <i class="fas fa-heart"></i>
+                            </div>
+
+                            <span>Favourites</span>
+                        </a>
+                    </div>
+                    <hr id="sideHr" class="ml-0 mr-1" />
+                    <div id="userPlaylists" class="d-flex flex-column">
+                        <a class="my-1 cut-text"
+                            >lorem2 sdadasdassssssssssssssss</a
+                        >
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                        <a class="my-1 cut-text">lorem2 ssss</a>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- MAIN PAGE -->
+            <main class="col" id="mainPage">
+                <!-- NAVIGATION BAR -->
+                <nav
+                    class="navbar bg-transparent navbar-light sticky-top"
+                    id="navBar"
                 >
-                  <path
-                    d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Search</span></a
-              >
-            </div>
+                    <a class="navbar-brand" href="#"
+                        ><i
+                            class="fas fa-chevron-circle-left chevron text-white-50"
+                        ></i
+                    ></a>
+                    <a class="navbar-brand mr-auto" href="#"
+                        ><i
+                            class="fas fa-chevron-circle-right chevron text-white-50"
+                        ></i
+                    ></a>
+                    <div class="dropdown">
+                        <button
+                            class="btn btn-dark dropdown-toggle text-light rounded-pill d-none d-md-inline-block"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <img
+                                src="https://picsum.photos/40/40?random=1"
+                                alt="user"
+                                id="userImg"
+                                class="rounded-circle mr-2"
+                            />
+                            Ardi germenji
+                        </button>
+                        <img
+                            src="https://picsum.photos/40/40?random=1"
+                            alt="user"
+                            id="userImg"
+                            class="btn btn-dark dropdown-toggle text-light d-md-none p-0 rounded-circle"
+                            type="button"
+                            id="dropdownMenuButtonXS"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        />
 
-            <!-- your library btn -->
-            <div class="library-btn mb-2 pl-3">
-              <a class="d-flex align-items-center" href="#" id="libraryBtn"
-                ><svg
-                  class="mr-3"
-                  viewBox="0 0 512 512"
-                  width="26"
-                  height="26"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                <span>Your library</span></a
-              >
-            </div>
+                        <!-- dropdown items for md up -->
+                        <div
+                            class="dropdown-menu"
+                            id="dropDown"
+                            aria-labelledby="dropdownMenuButton"
+                        >
+                            <a class="dropdown-item" href="#scrollTest"
+                                >Action</a
+                            >
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </div>
+                    </div>
+                    <!-- mobile -->
+                </nav>
+                <!-- album showcase section -->
+                <section class="container-fluid" id="showCase">
+                    <!-- first section -->
+                    <h5><a href="#">Title Row</a></h5>
+                    <div class="row" id="row-1">
+                        <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <div
+                                class="card align-items-start justify-content-start"
+                            >
+                                <img
+                                    src="https://picsum.photos/1000/1000?random=5"
+                                    class="card-img-top rounded"
+                                    alt="..."
+                                />
+                                <div class="card-body p-0 pl-2">
+                                    <h6 class="card-title text-black p-0">
+                                        Hello
+                                    </h6>
+                                    <p class="card-text text-white-50">
+                                        bla bla bla
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <div
+                                class="card align-items-start justify-content-start"
+                            >
+                                <img
+                                    src="https://picsum.photos/1000/1000?random=5"
+                                    class="card-img-top rounded"
+                                    alt="..."
+                                />
+                                <div class="card-body p-0 pl-2">
+                                    <h6 class="card-title text-black p-0">
+                                        Hello
+                                    </h6>
+                                    <p class="card-text text-white-50">
+                                        bla bla bla
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 d-none d-md-block col-md-6 col-lg-2 mb-2"
+                        >
+                            <div
+                                class="card align-items-start justify-content-start"
+                            >
+                                <img
+                                    src="https://picsum.photos/1000/1000?random=5"
+                                    class="card-img-top rounded"
+                                    alt="..."
+                                />
+                                <div class="card-body p-0 pl-2">
+                                    <h6 class="card-title text-black p-0">
+                                        Hello
+                                    </h6>
+                                    <p class="card-text text-white-50">
+                                        bla bla bla
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-none col-md-6 col-lg-2 mb-2">
+                            <div
+                                class="card align-items-start justify-content-start"
+                            >
+                                <img
+                                    src="https://picsum.photos/1000/1000?random=5"
+                                    class="card-img-top rounded"
+                                    alt="..."
+                                />
+                                <div class="card-body p-0 pl-2">
+                                    <h6 class="card-title text-black p-0">
+                                        Hello
+                                    </h6>
+                                    <p class="card-text text-white-50">
+                                        bla bla bla
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-none col-md-6 col-lg-2 mb-2">
+                            <div
+                                class="card align-items-start justify-content-start"
+                            >
+                                <img
+                                    src="https://picsum.photos/1000/1000?random=5"
+                                    class="card-img-top rounded"
+                                    alt="..."
+                                />
+                                <div class="card-body p-0 pl-2">
+                                    <h6 class="card-title text-black p-0">
+                                        Hello
+                                    </h6>
+                                    <p class="card-text text-white-50">
+                                        bla bla bla
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-none col-md-6 col-lg-2 mb-2">
+                            <div
+                                class="card align-items-start justify-content-start"
+                            >
+                                <img
+                                    src="https://picsum.photos/1000/1000?random=5"
+                                    class="card-img-top rounded"
+                                    alt="..."
+                                />
+                                <div class="card-body p-0 pl-2">
+                                    <h6 class="card-title text-black p-0">
+                                        Hello
+                                    </h6>
+                                    <p class="card-text text-white-50">
+                                        bla bla bla
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- playlist -->
-            <div class="playlist mt-3 pl-3">
-              <h5 class="mb-3">PLAYLIST</h5>
-              <a href="#" id="createPlaylistBtn">
-                <div
-                  id="createPlaylist"
-                  class="d-inline-flex justify-content-center align-items-center mr-2"
-                >
-                  <i class="fas fa-plus"></i>
-                </div>
+                    <div class="row" id="row-2"></div>
+                    <div class="row" id="row-3"></div>
+                </section>
+            </main>
 
-                <span>Create playlist</span>
-              </a>
-              <!-- favourites -->
-              <a href="#" id="favouritesBtn" class="d-block mt-2">
-                <div
-                  id="favourites"
-                  class="d-inline-flex justify-content-center align-items-center mr-2"
-                >
-                  <i class="fas fa-heart"></i>
-                </div>
+            <!-- FOOTER -->
+            <footer class="col-12" id="footer"></footer>
+        </div>
 
-                <span>Favourites</span>
-              </a>
-            </div>
-          </section>
-
-          <div class="col"></div>
-        </section>
-      </aside>
-
-      <!-- MAIN PAGE -->
-      <div class="col" id="mainPage">
-        <!-- NAVIGATION BAR -->
-        <nav class="navbar bg-transparent navbar-light sticky-top" id="navBar">
-          <a class="navbar-brand" href="#"
-            ><i class="fas fa-chevron-circle-left chevron text-white-50"></i
-          ></a>
-          <a class="navbar-brand mr-auto" href="#"
-            ><i class="fas fa-chevron-circle-right chevron text-white-50"></i
-          ></a>
-          <div class="dropdown">
-            <button
-              class="btn btn-dark dropdown-toggle text-light rounded-pill d-none d-md-inline-block"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <img
-                src="https://picsum.photos/40/40?random=1"
-                alt="user"
-                id="userImg"
-                class="rounded-circle mr-2"
-              />
-              Ardi germenji
-            </button>
-            <img
-              src="https://picsum.photos/40/40?random=1"
-              alt="user"
-              id="userImg"
-              class="btn btn-dark dropdown-toggle text-light d-md-none p-0 rounded-circle"
-              type="button"
-              id="dropdownMenuButtonXS"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            />
-
-            <!-- dropdown items for md up -->
-            <div
-              class="dropdown-menu"
-              id="dropDown"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <a class="dropdown-item" href="#scrollTest">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-          <!-- mobile -->
-        </nav>
-        <div class="container-fluid"></div>
-      </div>
-      <!-- FOOTER -->
-      <div class="col-12" id="footer"></div>
-    </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    <!-- smooth scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+        <!-- smooth scroll -->
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="app.js"></script>
+    </body>
 </html>
